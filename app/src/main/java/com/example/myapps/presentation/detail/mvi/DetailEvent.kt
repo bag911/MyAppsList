@@ -1,4 +1,4 @@
-package com.example.myapps.features.detail.mvi
+package com.example.myapps.presentation.detail.mvi
 
 sealed interface DetailEvent {
     data class ShowToast(val message: String) : DetailEvent

@@ -1,4 +1,4 @@
-package com.example.myapps.features.detail.mvi
+package com.example.myapps.presentation.detail.mvi
 
 import androidx.compose.runtime.Immutable
 

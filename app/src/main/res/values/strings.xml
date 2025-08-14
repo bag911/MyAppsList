@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">MyApps</string>
+    <string name="listScreen_title">Установленные приложения</string>
+    <string name="refresh">Refresh</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="listScreen_emptyListTitle">Пустой список</string>
+    <string name="listScreen_errorMessage">Ошибка: %1$s</string>
+    <string name="smth_went_wrong">Smth went wrong</string>
+    <string name="error">error</string>
+    <string name="detailScreen_title">Детали приложения</string>
+    <string name="d_nameText">Название: %1$s</string>
+    <string name="d_vesionText">Версия: %1$s</string>
+    <string name="d_packageText">Пакет: %1$s</string>
+    <string name="d_checksumText">SHA-1: %1$s</string>
+    <string name="loading">Loading...</string>
+    <string name="app_not_installed_message">App not installed</string>
 </resources>

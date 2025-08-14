@@ -1,4 +1,4 @@
-package com.example.myapps.features.detail.compose_views
+package com.example.myapps.presentation.detail.compose_views
 
 import android.content.Context
 import android.widget.Toast
@@ -9,10 +9,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import com.example.myapps.AppInfo
-import com.example.myapps.features.detail.AppDetailViewModel
-import com.example.myapps.features.detail.mvi.DetailAction
-import com.example.myapps.features.detail.mvi.DetailEvent
+import com.example.myapps.domain.model.AppInfo
+import com.example.myapps.R
+import com.example.myapps.presentation.detail.AppDetailViewModel
+import com.example.myapps.presentation.detail.mvi.DetailAction
+import com.example.myapps.presentation.detail.mvi.DetailEvent
 
 @Composable
 fun AppDetailScreenWrapper(
@@ -35,9 +36,11 @@ fun AppDetailScreenWrapper(
                 is DetailEvent.ShowToast -> {
                     Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
                 }
+
                 is DetailEvent.LaunchApp -> {
                     launchApp(context, event.packageName)
                 }
+
                 is DetailEvent.Back -> {
                     navController.popBackStack()
                 }
@@ -45,7 +48,10 @@ fun AppDetailScreenWrapper(
         }
     }
 
-    AppDetailScreen(state, viewModel::onAction)
+    AppDetailScreen(
+        state = state,
+        onAction = viewModel::onAction
+    )
 }
 
 fun launchApp(context: Context, packageName: String) {
@@ -53,6 +59,10 @@ fun launchApp(context: Context, packageName: String) {
     if (launchIntent != null) {
         context.startActivity(launchIntent)
     } else {
-        Toast.makeText(context, "App not installed", Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            context,
+            context.getString(R.string.app_not_installed_message),
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }

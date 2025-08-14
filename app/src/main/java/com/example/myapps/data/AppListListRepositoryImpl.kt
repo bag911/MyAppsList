@@ -1,15 +1,15 @@
-package com.example.myapps.features.list.data
+package com.example.myapps.data
 
 import android.content.Context
 import android.content.pm.PackageManager
-import com.example.myapps.AppInfo
+import com.example.myapps.domain.model.AppInfo
+import com.example.myapps.domain.AppListRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-
-class AppChecker @Inject constructor(@ApplicationContext private val appContext: Context) {
-
-    fun getInstalledApps(): List<AppInfo> {
+class AppListListRepositoryImpl @Inject constructor(@ApplicationContext private val appContext: Context):
+    AppListRepository {
+    override fun getInstalledApps(): List<AppInfo> {
         val pm = appContext.packageManager
         val packages = pm.getInstalledPackages(PackageManager.GET_META_DATA)
         return packages

@@ -1,4 +1,4 @@
-package com.example.myapps.features.list.compose_views
+package com.example.myapps.presentation.list.compose_views
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -6,8 +6,8 @@ import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import com.example.myapps.features.list.AppListViewModel
-import com.example.myapps.features.list.mvi.ListEvent
+import com.example.myapps.presentation.list.AppListViewModel
+import com.example.myapps.presentation.list.mvi.ListEvent
 import com.example.myapps.navigation.Screen
 
 @Composable

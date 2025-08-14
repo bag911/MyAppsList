@@ -1,4 +1,4 @@
-package com.example.myapps.features.detail.data
+package com.example.myapps.core.utils
 
 import java.io.File
 import java.io.FileInputStream
