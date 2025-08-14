@@ -1,5 +1,6 @@
 package com.example.myapps.presentation.detail.compose_views
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -58,21 +59,19 @@ fun AppDetailScreen(
         Column(
             modifier = Modifier
                 .padding(padding)
-                .padding(16.dp)
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(
-                text = stringResource(R.string.d_nameText, state.appName),
+                text = stringResource(R.string.detailScreen_nameText, state.appName),
                 fontWeight = FontWeight.Bold
             )
-            Text(text = stringResource(R.string.d_vesionText, state.versionName))
-            Text(text = stringResource(R.string.d_packageText, state.packageName))
+            Text(text = stringResource(R.string.detailScreen_vesionText, state.versionName))
+            Text(text = stringResource(R.string.detailScreen_packageText, state.packageName))
 
             val checkSumTxt =
                 state.checkSum.takeIf { it.isNotBlank() } ?: stringResource(R.string.loading)
-            Text(
-                text = stringResource(R.string.d_checksumText, checkSumTxt),
-                modifier = Modifier.padding(top = 8.dp)
-            )
+            Text(text = stringResource(R.string.detailScreen_checksumText, checkSumTxt))
         }
     }
 }
