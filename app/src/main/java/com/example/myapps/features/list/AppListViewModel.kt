@@ -2,9 +2,6 @@ package com.example.myapps.features.list
 
 import androidx.lifecycle.viewModelScope
 import com.example.myapps.core.MVIViewModel
-import com.example.myapps.features.detail.mvi.DetailAction
-import com.example.myapps.features.detail.mvi.DetailEvent
-import com.example.myapps.features.detail.mvi.DetailState
 import com.example.myapps.features.list.data.AppChecker
 import com.example.myapps.features.list.mvi.ListAction
 import com.example.myapps.features.list.mvi.ListEvent

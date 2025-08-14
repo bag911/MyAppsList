@@ -1,7 +1,5 @@
 package com.example.myapps.features.detail.data
 
-import android.content.Context
-import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
 import java.io.FileInputStream
 import java.security.MessageDigest

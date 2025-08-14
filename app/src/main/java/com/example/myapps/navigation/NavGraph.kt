@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.myapps.AppInfo
 import com.example.myapps.features.detail.AppDetailScreenWrapper
 import com.example.myapps.features.list.AppListScreenWrapper
 
