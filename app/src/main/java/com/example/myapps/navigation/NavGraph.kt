@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.myapps.features.detail.AppDetailScreenWrapper
-import com.example.myapps.features.list.AppListScreenWrapper
+import com.example.myapps.features.detail.compose_views.AppDetailScreenWrapper
+import com.example.myapps.features.list.compose_views.AppListScreenWrapper
 
 @Composable
 fun NavGraph() {

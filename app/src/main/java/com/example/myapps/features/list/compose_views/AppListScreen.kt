@@ -1,4 +1,4 @@
-package com.example.myapps.features.list
+package com.example.myapps.features.list.compose_views
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode

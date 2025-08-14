@@ -1,4 +1,4 @@
-package com.example.myapps.features.detail
+package com.example.myapps.features.detail.compose_views
 
 import android.content.Context
 import android.widget.Toast
@@ -10,6 +10,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.example.myapps.AppInfo
+import com.example.myapps.features.detail.AppDetailViewModel
 import com.example.myapps.features.detail.mvi.DetailAction
 import com.example.myapps.features.detail.mvi.DetailEvent
 
@@ -36,6 +37,9 @@ fun AppDetailScreenWrapper(
                 }
                 is DetailEvent.LaunchApp -> {
                     launchApp(context, event.packageName)
+                }
+                is DetailEvent.Back -> {
+                    navController.popBackStack()
                 }
             }
         }
