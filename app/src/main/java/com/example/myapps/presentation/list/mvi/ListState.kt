@@ -5,7 +5,7 @@ import com.example.myapps.domain.model.AppInfo
 
 @Immutable
 data class ListState(
-    val uiState: UiState = UiState.Empty,
+    val uiState: UiState = UiState.Loading,
 )
 
 sealed interface UiState {
