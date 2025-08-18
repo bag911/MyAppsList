@@ -54,7 +54,7 @@ fun AppDetailScreenWrapper(
     )
 }
 
-fun launchApp(context: Context, packageName: String) {
+private fun launchApp(context: Context, packageName: String) {
     val launchIntent = context.packageManager.getLaunchIntentForPackage(packageName)
     if (launchIntent != null) {
         context.startActivity(launchIntent)
